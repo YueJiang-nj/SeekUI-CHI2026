@@ -15,7 +15,7 @@
 
 ## 📢 News
 * **[Coming Soon]** We are currently organizing the code and checkpoints. They will be released shortly. Please star ⭐ this repo to get notifications!
-* **[2026-01-15]** The paper is accepted by **CHI 2026**! 🎉
+* **[2026-01-15]** The paper is accepted with Minor Revision to **CHI 2026**! 🎉
 
 ## 🏠 Abstract
 This repository contains the official implementation of the paper **"SeekUI: Predicting Visual Search Behavior on Graphical User Interfaces with a Reward-Augmented Vision Language Model"**.
