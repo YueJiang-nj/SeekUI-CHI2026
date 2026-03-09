@@ -14,7 +14,7 @@
 </div>
 
 ## 📢 News
-* **[Coming Soon]** We are currently organizing the code and checkpoints. They will be released shortly. Please star ⭐ this repo to get notifications!
+* **[Coming Soon]** We are currently organizing the code and checkpoints in the [SeekUI Temporary Repo](https://github.com/YueJiang-nj/SeekUI-CHI2026-temp). They will be ready and released into this repository soon. Please star ⭐ this repo to get notifications!
 * **[2026-01-15]** The paper is accepted with Minor Revision to **CHI 2026**! 🎉
 
 ## 🏠 Abstract
