@@ -5,7 +5,7 @@
 *The two-stage SeekUI framework: Instruction Tuning stage and Reinforcement Learning stage.*
 
 [![CHI 2026](https://img.shields.io/badge/CHI-2026-blue)](https://chi2026.acm.org/)
-[![Paper](https://img.shields.io/badge/Paper-PDF-orange)](https://yuejiang-nj.github.io/Publications/2026CHI_SeekUI/paper.pdf)
+[![Paper](https://img.shields.io/badge/Paper-PDF-orange)](https://dl.acm.org/doi/full/10.1145/3772318.3791178)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 <!-- **Zixin Guo**$^{*1}$, **Yue Jiang**$^{*2}$, **Luis A. Leiva**$^{3}$, **Antti Oulasvirta**$^{1}$ -->
