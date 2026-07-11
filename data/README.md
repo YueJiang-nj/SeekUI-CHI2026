@@ -9,12 +9,14 @@ The SeekUI framework uses a two-stage training pipeline. Both stages use the **V
 1. Download `vsgui10k-images` from [Google Drive](https://drive.google.com/drive/folders/1Qbrwa6uZqRxgcwyWTF0bVZCEYkP7xTWK?usp=sharing).
 2. Download `scanpath_train_explanation.json` from [Google Drive](https://drive.google.com/file/d/1ZIlf3GTTqXn-_kE8DBy-F1VV8QhAlBRh/view?usp=sharing).
 3. Download `target2text.json` from [Google Drive](https://drive.google.com/file/d/1pLHVWtbS3y6jWDTmwYmmQrXzKFKwWZDl/view?usp=sharing).
+4. Download `scanpath_test.json` from [Google Drive](https://drive.google.com/file/d/1QExc7fh3mYEVt1QYAkkCYeyZ6foEOGc3/view?usp=sharing). 
 
 Place them under the `data/` directory:
 
 ```
 data/
 ├── scanpath_train_explanation.json
+├── scanpath_test.json
 ├── target2text.json
 └── vsgui10k-images/
     ├── f4b47d.png
