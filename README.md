@@ -52,6 +52,8 @@ pip install scikit-learn
 pip install wandb==0.21.0
 pip install flash-attn==2.7.4.post1 --no-build-isolation
 pip install transformers==4.51.1
+pip install decord==0.6.0
+pip install qwen_vl_utils==0.0.14
 ```
 
 > **Note:** `flash-attn` requires a CUDA-compatible GPU and may take some time to compile. Make sure your CUDA toolkit version is compatible with your PyTorch installation.
