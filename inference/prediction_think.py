@@ -84,7 +84,7 @@ def parse_args():
                         help="Path to the target-to-text mapping JSON file")
     parser.add_argument("--test_data_path", type=str,
                         default="vsgui/length20_test_text.csv",
-                        help="Path to the test CSV data file")
+                        help="Path to the test CSV data file, not required if test scanpath JSON has been configured")
     parser.add_argument("--image_root", type=str,
                         default="vsgui",
                         help="Root directory for images")
@@ -106,9 +106,11 @@ def main():
         torch_dtype=torch.bfloat16,
         attn_implementation="flash_attention_2",
         device_map="auto",
-        cache_dir=args.cache_dir
     )
-    processor = AutoProcessor.from_pretrained(args.model_path, cache_dir=args.cache_dir)
+    processor = AutoProcessor.from_pretrained(args.model_path)
+    processor.chat_template = "{% set image_count = namespace(value=0) %}{% set video_count = namespace(value=0) %}{% for message in messages %}{% if loop.first and message['role'] != 'system' %}<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n{% endif %}<|im_start|>{{ message['role'] }}\n{% if message['content'] is string %}{{ message['content'] }}<|im_end|>\n{% else %}{% for content in message['content'] %}{% if content['type'] == 'image' or 'image' in content or 'image_url' in content %}{% set image_count.value = image_count.value + 1 %}{% if add_vision_id %}Picture {{ image_count.value }}: {% endif %}<|vision_start|><|image_pad|><|vision_end|>{% elif content['type'] == 'video' or 'video' in content %}{% set video_count.value = video_count.value + 1 %}{% if add_vision_id %}Video {{ video_count.value }}: {% endif %}<|vision_start|><|video_pad|><|vision_end|>{% elif 'text' in content %}{{ content['text'] }}{% endif %}{% endfor %}<|im_end|>\n{% endif %}{% endfor %}{% if add_generation_prompt %}<|im_start|>assistant\n{% endif %}"
+    if hasattr(processor, "tokenizer"):
+        processor.tokenizer.chat_template = processor.chat_template
 
     # Load data
     target2txt = json.load(open(args.target2text, "r"))
