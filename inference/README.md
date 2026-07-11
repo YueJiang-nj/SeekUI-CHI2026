@@ -26,11 +26,11 @@ The predicted scanpath could be found in `evaluation/test_predictions_SeekUI_sft
 
 ## Arguments
 
-Both scripts share the same set of command-line arguments:
+The script uses the following set of command-line arguments:
 
 | Argument | Type | Default | Description |
 |---|---|---|---|
-| `--model_path` | `str` | *(see below)* | Path to the pretrained model checkpoint |
+| `--model_path` | `str` | `/path/to/model/SeekUI` | Path to the pretrained model checkpoint |
 | `--cache_dir` | `str` | *(optional)* | Cache directory for the model |
 | `--scanpath_test` | `str` | `/path/to/data/scanpath_test.json` | Path to the cached test scanpath JSON file |
 | `--target2text` | `str` | `/path/to/data/target2text.json` | Path to the target-to-text mapping JSON |
