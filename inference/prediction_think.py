@@ -111,7 +111,6 @@ def main():
     processor = AutoProcessor.from_pretrained(args.model_path, cache_dir=args.cache_dir)
 
     # Load data
-    scanpath_train = json.load(open(args.scanpath_train, "r"))
     target2txt = json.load(open(args.target2text, "r"))
 
     if not os.path.exists(args.scanpath_test):
@@ -175,9 +174,6 @@ def main():
 
         answer_match = re.search(r'<answer>(.*?)</answer>', content)
         scanpath_answer = answer_match.group(1).strip() if answer_match else content.strip()
-
-        # Load the image using PIL
-        image = Image.open(messages[0]["content"][1]["image"]).convert("RGB")
 
         # Extract scanpath points from the sentence
         sentence = scanpath_answer
