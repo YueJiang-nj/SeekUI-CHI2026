@@ -45,7 +45,7 @@ Both scripts share the same set of command-line arguments:
 - **target2text.json**: A JSON mapping from target IDs to their text descriptions.
 - **Images**: GUI screenshot image folder `vsgui10k-images` stored under `--image_root` directory.
 
-For more details, please check the [Data](../data/Data.md).
+For more details, please check the [Data](../data/README.md).
 
 ## Output Format
 
