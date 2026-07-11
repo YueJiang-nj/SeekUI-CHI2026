@@ -16,6 +16,7 @@ Runs scanpath prediction **with** an explanation step. The model is prompted to 
 python prediction_think.py \
     --model_path /path/to/SeekUI \
     --scanpath_test /path/to/data/scanpath_test.json \
+    --target2text /path/to/data/target2text.json \
     --image_root /path/to/data \
     --output /path/to/output/test_predictions_SeekUI.json
 ```
